@@ -1,0 +1,27 @@
+/* Reset */
+ol,ul { margin: 0; list-style: none; }
+a { text-decoration: none; color: inherit; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 16px; font-family: 'Roboto', sans-serif; }
+button, input { color: inherit; border: none; background: transparent; }
+
+/* Styles */
+.flex { display: flex; }
+.flex-column { flex-direction: column; }
+.max-w-320 { max-width: 20rem; }
+.ai-center { align-items: center; }
+.jc-center { justify-content: center; }
+.jc-between { justify-content: space-between; }
+.jc-end { justify-content: flex-end; }
+.bg-lightgray { background-color: #e6e7ec; }
+.bdrs-4 { border-radius: 0.25rem; }
+.p-4 { padding: 0.25rem; }
+.p-8 { padding: 0.5rem; }
+.p-0 { padding: 0 }
+.w-24 { width: 1.5rem; }
+.h-24 { height: 1.5rem; }
+.fsz-18 { font-size: 1.125rem; }
+.clr-navyblue { color: #172b4d; }
+.clr-gray { color: #a5adba; }
+.fw-600 { font-weight: 600; }
+.fsz-16 { font-size: 1rem; line-height: 1.5rem; }
