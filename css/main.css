@@ -1,0 +1,5 @@
+/* Reset */
+*,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* General */
+html { font-size: 16px; font-family: sans-serif; }
