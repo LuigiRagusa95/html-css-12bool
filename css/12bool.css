@@ -22,7 +22,19 @@
 .gutter-4 { padding-left: 0.25rem; padding-right: 0.25rem; }
 
 /* Offset */
-.offset-x-1 {  }
+.offset-left-1 { margin-left: calc((100% / 12) * 1); }
+.offset-left-2 { margin-left: calc((100% / 12) * 2); }
+.offset-left-3 { margin-left: calc((100% / 12) * 3); }
+.offset-left-4 { margin-left: calc((100% / 12) * 4); }
+.offset-left-5 { margin-left: calc((100% / 12) * 5); }
+.offset-left-6 { margin-left: calc((100% / 12) * 6); }
+.offset-left-7 { margin-left: calc((100% / 12) * 7); }
+.offset-left-8 { margin-left: calc((100% / 12) * 8); }
+.offset-left-9 { margin-left: calc((100% / 12) * 9); }
+.offset-left-10 { margin-left: calc((100% / 12) * 10); }
+.offset-left-11 { margin-left: calc((100% / 12) * 11); }
+.offset-left-12 { margin-left: calc((100% / 12) * 12); }
+
 
 /* Colors */
 .bg-blue { background-color: #699bf7; }
