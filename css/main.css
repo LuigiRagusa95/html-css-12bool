@@ -3,3 +3,6 @@
 
 /* General */
 html { font-size: 16px; font-family: sans-serif; }
+
+
+.box { min-height: 2rem; border-radius: .5rem; border: 2px solid #000000; }
