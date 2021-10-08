@@ -1,6 +1,6 @@
 /* Layout */
 .container { max-width: 1280px; margin: 0 auto; }
-.row { display: flex; flex-wrap: wrap; padding: .5rem; }
+.row { display: flex; flex-wrap: wrap; padding: .25rem; }
 .my-8 { margin-top: .5rem; margin-bottom: .5rem; }
 
 .pl-4 { padding-left: 0.25rem; }
@@ -18,6 +18,11 @@
 .col-10 { width: calc((100% / 12) * 10); }
 .col-11 { width: calc((100% / 12) * 11); }
 .col-12 { width: calc((100% / 12) * 12); }
+
+.gutter-4 { padding-left: 0.25rem; padding-right: 0.25rem; }
+
+/* Offset */
+.offset-x-1 {  }
 
 /* Colors */
 .bg-blue { background-color: #699bf7; }
