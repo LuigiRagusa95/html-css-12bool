@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>minesweeper</title>
+        <link rel="stylesheet" href="./css/main.css" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body class="bg-teal">
+        <div class="container w-100p mx-auto">
+            <div class="row">
+                <!-- beginner -->
+                <div class="col-4">
+                    <div class="container-beginner w-100p mx-auto p-4 bg-gray boxed">
+                        <div class="row boxed">
+                            <div class="col-12 p-8">
+                                <div class="flex ai-center jc-between">
+                                    <div class="flex ai-center w-43 h-26">
+                                        <span class="flex flex-shrink-0 w-13 h-24 msw-number-0"></span>
+                                        <span class="flex flex-shrink-0 w-13 h-24 msw-number-0"></span>
+                                        <span class="flex flex-shrink-0 w-13 h-24 msw-number-0"></span>
+                                    </div>
+                                    <span class="flex ai-center jc-center msw-button">
+                                        <span class="flex flex-shrink-0 w-24 h-24 msw-face-smile"></span>
+                                    </span>
+                                    <span class="flex ai-center counter">
+                                        <span class="flex flex-shrink-0 w-13 h-24 msw-number-0"></span>
+                                        <span class="flex flex-shrink-0 w-13 h-24 msw-number-0"></span>
+                                        <span class="flex flex-shrink-0 w-13 h-24 msw-number-0"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-16">
+                            <div class="col-12 boxed">
+                                <div class="row">
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-3"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-2"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-2"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- intermediate -->
+                <div class="col-8">
+                    <div class="container-intermediate w-100p mx-auto p-4 bg-gray boxed">
+                        <div class="row boxed">
+                            <div class="col-12 p-8">
+                                <div class="flex ai-center jc-between">
+                                    <div class="flex ai-center w-43 h-26">
+                                        <span class="flex flex-shrink-0 w-13 h-24 msw-number-0"></span>
+                                        <span class="flex flex-shrink-0 w-13 h-24 msw-number-0"></span>
+                                        <span class="flex flex-shrink-0 w-13 h-24 msw-number-0"></span>
+                                    </div>
+                                    <span class="flex ai-center jc-center msw-button">
+                                        <span class="flex flex-shrink-0 w-24 h-24 msw-face-end"></span>
+                                    </span>
+                                    <span class="flex ai-center counter">
+                                        <span class="flex flex-shrink-0 w-13 h-24 msw-number-0"></span>
+                                        <span class="flex flex-shrink-0 w-13 h-24 msw-number-0"></span>
+                                        <span class="flex flex-shrink-0 w-13 h-24 msw-number-0"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-16">
+                            <div class="col-md-16 boxed">
+                                <div class="row">
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-2"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-3"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-4"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-2"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-2"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-2"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-2"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-2"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-empty"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-2"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine-red"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-1"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-2"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-number-2"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell-mine"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                    <div class="col-md-1"><span class="flex ai-center jc-center flex-shrink-0 h-16 msw-cell msw-button"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- other can be added -->
+            </div>
+        </div>
+    </body>
+</html>
