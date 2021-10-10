@@ -1,0 +1,80 @@
+/* || --> Reset */
+ol, ul { list-style: none; margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }
+*,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
+img, svg, video, canvas, audio, iframe, embed, object { display: block; }
+
+html, body { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-color: #000000; }
+
+/* || --> Layout */
+.flex { display: flex; }
+.flex-shrink-0 { flex-shrink: 0; }
+.ai-center { align-items: center; }
+.jc-end { justify-content: flex-end; }
+.jc-center { justify-content: center; }
+.mt-96 { margin-top:6rem }
+.mb-32 { margin-bottom:2rem }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.w-8 { width: 0.5rem; }
+.w-16 { width: 1rem; }
+.w-24 { width: 1.5rem; }
+.w-100p { width: 100%; }
+.h-8 { height: 0.5rem; }
+.h-24 { height: 1.5rem; }
+.h-100p { height: 100%; }
+
+/* || --> Flexgrid */
+.container-xs { max-width: 480px; }
+.container-sm { max-width: 640px; }
+.container-md { max-width: 768px; }
+.container-lg { max-width: 1024px; }
+.container-xl { max-width: 1280px; }
+.container-xxl { max-width: 1536px }
+
+.col-1 { width: calc((100% / 12) * 1); }
+.col-2 { width: calc((100% / 12) * 2); }
+.col-3 { width: calc((100% / 12) * 3); }
+.col-4 { width: calc((100% / 12) * 4); }
+.col-5 { width: calc((100% / 12) * 5); }
+.col-6 { width: calc((100% / 12) * 6); }
+.col-7 { width: calc((100% / 12) * 7); }
+.col-8 { width: calc((100% / 12) * 8); }
+.col-9 { width: calc((100% / 12) * 9); }
+.col-10 { width: calc((100% / 12) * 10); }
+.col-11 { width: calc((100% / 12) * 11); }
+.col-12 { width: calc((100% / 12) * 12); }
+
+.offset-left-1 { margin-left: calc((100% / 12) * 1); }
+.offset-left-2 { margin-left: calc((100% / 12) * 2); }
+.offset-left-3 { margin-left: calc((100% / 12) * 3); }
+.offset-left-4 { margin-left: calc((100% / 12) * 4); }
+.offset-left-5 { margin-left: calc((100% / 12) * 5); }
+.offset-left-6 { margin-left: calc((100% / 12) * 6); }
+.offset-left-7 { margin-left: calc((100% / 12) * 7); }
+.offset-left-8 { margin-left: calc((100% / 12) * 8); }
+.offset-left-9 { margin-left: calc((100% / 12) * 9); }
+.offset-left-10 { margin-left: calc((100% / 12) * 10); }
+.offset-left-11 { margin-left: calc((100% / 12) * 11); }
+.offset-left-12 { margin-left: calc((100% / 12) * 12); }
+
+.row { display: flex; flex-wrap: wrap; }
+.row > [class*='col-'] { display: flex; flex-direction: column; }
+.gridbox { background: rgba(229, 229, 234, 1); border: 2px solid rgba(58, 58, 60, 1); border-radius: 2px; }
+
+/* || --> Misc */
+.player { background-image: url(../img/sprites.png); background-position: -2px -2px; image-rendering: pixelated; background-repeat: no-repeat; transform: scale(2); }
+
+.invider-lvl-1 { background-image: url(../img/sprites.png); background-position: -20px -2px; image-rendering: pixelated; background-repeat: no-repeat; transform: scale(2); }
+.invider-lvl-2 { background-image: url(../img/sprites.png); background-position: -38px -2px; image-rendering: pixelated; background-repeat: no-repeat; transform: scale(2); }
+.invider-lvl-3 { background-image: url(../img/sprites.png); background-position: -56px -2px; image-rendering: pixelated; background-repeat: no-repeat; transform: scale(2); }
+.invider-none { background-image: url(../img/sprites.png); background-position: -74px -2px; image-rendering: pixelated; background-repeat: no-repeat; transform: scale(2); }
+
+.number-1 { background-image: url(../img/sprites.png); background-position: -3px -12px; image-rendering: pixelated; background-repeat: no-repeat; transform: scale(2); }
+.number-2 { background-image: url(../img/sprites.png); background-position: -10px -12px; image-rendering: pixelated; background-repeat: no-repeat; transform: scale(2); }
+.number-3 { background-image: url(../img/sprites.png); background-position: -18px -12px; image-rendering: pixelated; background-repeat: no-repeat; transform: scale(2); }
+.number-4 { background-image: url(../img/sprites.png); background-position: -26px -12px; image-rendering: pixelated; background-repeat: no-repeat; transform: scale(2); }
+.number-5 { background-image: url(../img/sprites.png); background-position: -34px -12px; image-rendering: pixelated; background-repeat: no-repeat; transform: scale(2); }
+.number-6 { background-image: url(../img/sprites.png); background-position: -42px -12px; image-rendering: pixelated; background-repeat: no-repeat; transform: scale(2); }
+.number-7 { background-image: url(../img/sprites.png); background-position: -50px -12px; image-rendering: pixelated; background-repeat: no-repeat; transform: scale(2); }
+.number-8 { background-image: url(../img/sprites.png); background-position: -58px -12px; image-rendering: pixelated; background-repeat: no-repeat; transform: scale(2); }
+.number-9 { background-image: url(../img/sprites.png); background-position: -66px -12px; image-rendering: pixelated; background-repeat: no-repeat; transform: scale(2); }

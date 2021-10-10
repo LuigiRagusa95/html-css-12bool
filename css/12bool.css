@@ -37,8 +37,11 @@
 
 
 /* Colors */
+.bg-red { background-color: #ff7051; }
 .bg-blue { background-color: #699bf7; }
+.bg-brown { background-color: #d27c2c; }
 .bg-green { background-color: #0fa958; }
+.bg-yellow { background-color: #ffc700; }
 
 /* Media Queries */
 @media screen and (max-width: 640px) { 
